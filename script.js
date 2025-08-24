@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const volumeIcon = document.querySelector('.volume-control i');
     let isPlaying = false;
 
-    // Définir le volume initial à 15%
-    audio.volume = 0.15;
+    // Définir le volume initial à 10%
+    audio.volume = 0.1;
 
     // Démarrer la musique au premier clic
     document.body.addEventListener('click', function() {
