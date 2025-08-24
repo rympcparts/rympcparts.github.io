@@ -2,8 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('background-audio');
     const volumeSlider = document.querySelector('.volume-slider');
     const volumeIcon = document.querySelector('.volume-control i');
+    const volumeControl = document.querySelector('.volume-control');
 
-    // Configurer le volume initial à 10%
+    // Vérifier si c'est un appareil mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // Sur mobile, on cache les contrôles audio et on désactive le son
+        if (volumeControl) volumeControl.style.display = 'none';
+        if (audio) audio.remove();
+        return;
+    }
+
+    // Sur desktop, on configure le volume initial à 10%
     audio.volume = 0.1;
     volumeSlider.value = 10;
 
