@@ -4,20 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const volumeIcon = document.querySelector('.volume-control i');
     let isPlaying = false;
 
-    // Définir le volume initial
-    audio.volume = 0.3;
+    // Définir le volume initial à 10%
+    audio.volume = 0.1;
 
-    // Fonction pour jouer l'audio
-    function playAudio() {
-        audio.play()
-            .then(() => {
-                isPlaying = true;
-                updateVolumeIcon();
-            })
-            .catch(error => {
-                console.log("Erreur de lecture:", error);
-            });
-    }
+    // Démarrer la musique au premier clic
+    document.body.addEventListener('click', function() {
+        if (!isPlaying) {
+            audio.play();
+            isPlaying = true;
+        }
+    }, { once: true });
 
     // Gestionnaire du volume
     volumeSlider.addEventListener('input', function() {
@@ -49,24 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
             volumeSlider.value = previousVolume * 100;
         }
         updateVolumeIcon();
-    });
-
-    // Essayer de lancer l'audio immédiatement
-    playAudio();
-
-    // Essayer de lancer l'audio au premier clic
-    document.addEventListener('click', function startAudio() {
-        if (!isPlaying) {
-            playAudio();
-        }
-        document.removeEventListener('click', startAudio);
-    });
-
-    // Relancer l'audio s'il est interrompu
-    audio.addEventListener('pause', () => {
-        if (isPlaying) {
-            playAudio();
-        }
     });
 });tListener('DOMContentLoaded', function() {
     const audio = document.getElementById('background-audio');
