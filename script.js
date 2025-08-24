@@ -2,6 +2,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('background-audio');
     const volumeSlider = document.querySelector('.volume-slider');
     const volumeIcon = document.querySelector('.volume-control i');
+    
+    // Configuration initiale
+    audio.volume = 0.3;
+    
+    // Fonction pour jouer l'audio
+    const playAudio = async () => {
+        try {
+            await audio.play();
+        } catch (e) {
+            console.log("Tentative de lecture automatique échouée, en attente d'interaction...");
+        }
+    };
+
+    // Essayer de lancer l'audio immédiatement et sur plusieurs événements
+    playAudio();
+
+    // Liste des événements qui peuvent déclencher la lecture
+    ['click', 'touchstart', 'mouseenter', 'scroll'].forEach(eventType => {
+        document.addEventListener(eventType, () => {
+            audio.play().catch(() => {});
+        }, { once: true });
+    });
+
+    // Reprendre la lecture si elle est interrompue
+    audio.addEventListener('pause', () => {
+        audio.play().catch(() => {});
+    });
+
+    // S'assurer que l'audio continue de jouer même après un changement d'onglet
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            audio.play().catch(() => {});
+        }
+    });tListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('background-audio');
+    const volumeSlider = document.querySelector('.volume-slider');
+    const volumeIcon = document.querySelector('.volume-control i');
     let isPlaying = false;
 
     // Définir le volume initial à 15%
