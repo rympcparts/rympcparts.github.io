@@ -117,6 +117,16 @@ body {
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition:
+        box-shadow 0.3s cubic-bezier(.4,2,.6,1),
+        transform 0.3s cubic-bezier(.4,2,.6,1),
+        border-color 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 12px 48px 0 rgba(255,255,255,0.12), 0 2px 8px 0 rgba(0,0,0,0.25);
+    transform: scale(1.025) translateY(-4px);
+    border-color: rgba(255,255,255,0.25);
 }
 
 .profile {
@@ -146,6 +156,21 @@ h1 {
     background: linear-gradient(to right, #fff, #ccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Glow effect */
+    text-shadow:
+        0 0 8px #fff,
+        0 0 16px #b3b3b3,
+        0 0 24px #b3b3b3;
+    transition: text-shadow 0.3s, transform 0.3s;
+}
+
+h1:hover {
+    /* Stronger glow and a little scale on hover */
+    text-shadow:
+        0 0 16px #fff,
+        0 0 32px #b3b3b3,
+        0 0 48px #b3b3b3;
+    transform: scale(1.04) rotate(-1deg);
 }
 
 .bio-text {
