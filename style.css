@@ -156,7 +156,6 @@ h1 {
     background: linear-gradient(to right, #fff, #ccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Glow effect */
     text-shadow:
         0 0 8px #fff,
         0 0 16px #b3b3b3,
@@ -165,7 +164,6 @@ h1 {
 }
 
 h1:hover {
-    /* Stronger glow and a little scale on hover */
     text-shadow:
         0 0 16px #fff,
         0 0 32px #b3b3b3,
@@ -219,7 +217,7 @@ h1:hover {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 12px;
