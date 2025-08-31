@@ -84,3 +84,12 @@
   </div>
 </body>
 </html>
+
+<script>
+  window.addEventListener('load', () => {
+    const mainCard = document.querySelector('.main-card');
+    if(window.innerWidth <= 900) {
+      mainCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+</script>
