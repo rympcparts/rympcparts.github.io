@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wlmouse enjoyer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folerym</title>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/avatar.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/avatar.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/avatar.png">
-    <link rel="shortcut icon" type="image/png" href="/assets/avatar.png">
-    <meta name="theme-color" content="#000000">
-    
-    <meta name="description" content="Founder rympcparts.online & cybersec learner">
-    <meta property="og:title" content="Folerym">
-    <meta property="og:description" content="Founder rympcparts.online & cybersec learner">
-    <meta property="og:image" content="https://rympcparts.github.io/assets/avatar.png">
-    <meta property="og:url" content="https://rympcparts.github.io">
-    <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/assets/avatar.png">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Founder rympcparts.online & cybersec learner">
+  <meta property="og:title" content="Folerym">
+  <meta property="og:description" content="Founder rympcparts.online & cybersec learner">
+  <meta property="og:image" content="https://rympcparts.github.io/assets/avatar.png">
+  <meta property="og:url" content="https://rympcparts.github.io">
+  <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="bg-image"></div>
-    
-    <div class="overlay"></div>
+  <div id="bg-image"></div>
+  <div class="overlay"></div>
 
-    <audio id="background-audio" autoplay loop>
-        <source src="\assets\sheriff.mp3" type="audio/mpeg">
-    </audio>
+  <div class="layout">
+    <div class="card main-card">
+      <div class="profile">
+        <img src="/assets/avatar.png" alt="Avatar" class="avatar">
+        <h1>Folerym</h1>
+        <p class="bio-text">founder rympcparts & cybersec learner</p>
+      </div>
 
-    <div class="volume-control">
-        <i class="fas fa-volume-down"></i>
-        <input type="range" class="volume-slider" min="0" max="100" value="10">
+      <div class="links">
+        <a href="https://rympcparts.online" class="link-button" target="_blank">
+          <i class="fa-solid fa-globe"></i> - Rym PC Parts & Optimizations
+        </a>
+        <a href="https://youtube.com/@Folerym" class="link-button" target="_blank">
+          <i class="fab fa-youtube"></i> - YouTube
+        </a>
+        <a href="https://discord.com/users/732862973831413870" class="link-button" target="_blank">
+          <i class="fa-brands fa-discord"></i> - Discord
+        </a>
+        <a href="https://namemc.com/profile/Folerym" class="link-button" target="_blank">
+          <i class="fas fa-cube"></i> - NameMC
+        </a>
+      </div>
     </div>
 
-    <div class="container">
-        <div class="profile">
-            <img src="\assets\avatar.png" alt="Avatar" class="avatar">
-            <h1>Folerym</h1>
-            <p class="bio-text">founder rympcparts & cybersec learner</p>
-        </div>
+    <aside class="card setup-card">
+      <h2 class="setup-title">Setup :</h2>
 
-        <div class="links">
-            <a href="https://rympcparts.online" class="link-button" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-globe"></i>
-                - Rym PC Parts & Optimizations
-            </a>
-            <a href="https://youtube.com/@Folerym" class="link-button" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-youtube"></i>
-                - YouTube
-            </a>
-            <a href="https://discord.com/users/732862973831413870" class="link-button" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-discord"></i>
-                - Discord
-            </a>
-            <a href="https://namemc.com/profile/Folerym" class="link-button" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-cube"></i>
-                - NameMC
-            </a>
+      <div class="activity">
+        <div class="activity-icon">
+          <i class="fa-solid fa-computer-mouse"></i>
         </div>
-    </div>
+        <div class="activity-body">
+          <div class="activity-app">Souris</div>
+          <div class="activity-title">WLMOUSE BeastX Pro Mini</div>
+          <div class="activity-sub">1600 • 1000hz • Omron Optical</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-icon">
+          <i class="fa-solid fa-keyboard"></i>
+        </div>
+        <div class="activity-body">
+          <div class="activity-app">Clavier</div>
+          <div class="activity-title">STEELSERIES Apex Pro Mini</div>
+          <div class="activity-sub">Optical • Azerty • 0.2</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-icon">
+          <i class="fa-solid fa-square"></i>
+        </div>
+        <div class="activity-body">
+          <div class="activity-app">Tapis</div>
+          <div class="activity-title">WALLHACK SP-004</div>
+          <div class="activity-sub">43 x 49 x 0,39 cm • Glass • 4mm</div>
+        </div>
+      </div>
+    </aside>
+  </div>
 </body>
 </html>
